@@ -91,20 +91,20 @@ class DefaultOverrides {
    */
   readonly CRITICAL_HIT_OVERRIDE: boolean | null = null;
   /** @defaultValue `1000` */
-  readonly STARTING_MONEY_OVERRIDE: number = 0;
+  readonly STARTING_MONEY_OVERRIDE: number = 10000;
   /** Sets all shop item prices to 0 */
   readonly WAIVE_SHOP_FEES_OVERRIDE: boolean = false;
   /** Sets reroll price to 0 */
   readonly WAIVE_ROLL_FEE_OVERRIDE: boolean = false;
   readonly FREE_CANDY_UPGRADE_OVERRIDE: boolean = false;
   readonly POKEBALL_OVERRIDE: { active: boolean; pokeballs: PokeballCounts } = {
-    active: false,
+    active: true,
     pokeballs: {
-      [PokeballType.POKEBALL]: 5,
-      [PokeballType.GREAT_BALL]: 0,
+      [PokeballType.POKEBALL]: 15,
+      [PokeballType.GREAT_BALL]: 5,
       [PokeballType.ULTRA_BALL]: 0,
       [PokeballType.ROGUE_BALL]: 0,
-      [PokeballType.MASTER_BALL]: 0,
+      [PokeballType.MASTER_BALL]: 1,
     },
   };
   /** Forces an item to be UNLOCKED */
@@ -262,7 +262,9 @@ class DefaultOverrides {
    * STARTING_HELD_ITEM_OVERRIDE = [{name: "BERRY"}]
    * ```
    */
-  readonly STARTING_MODIFIER_OVERRIDE: ModifierOverride[] = [];
+  readonly STARTING_MODIFIER_OVERRIDE: ModifierOverride[] = [
+    {name: 'GOLDEN_POKEBALL', count: 1}
+  ];
   /**
    * Override array of {@linkcode ModifierOverride}s used to provide modifiers to enemies.
    *

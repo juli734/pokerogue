@@ -6,10 +6,10 @@
 
 // #region Encounterable properties
 /** `64/65536 -> 1/1024` */
-export const BASE_SHINY_CHANCE = 64;
+export const BASE_SHINY_CHANCE = 128;
 
 /** `256/65536 -> 1/256` */
-export const BASE_HIDDEN_ABILITY_CHANCE = 256;
+export const BASE_HIDDEN_ABILITY_CHANCE = 512;
 
 // #region Egg properties
 
@@ -29,18 +29,18 @@ export const EGG_PITY_RARE_THRESHOLD = 9;
 
 // Waves to hatch an egg of a given tier
 export const HATCH_WAVES_COMMON_EGG = 10;
-export const HATCH_WAVES_RARE_EGG = 25;
-export const HATCH_WAVES_EPIC_EGG = 50;
-export const HATCH_WAVES_LEGENDARY_EGG = 100;
+export const HATCH_WAVES_RARE_EGG = 20;
+export const HATCH_WAVES_EPIC_EGG = 40;
+export const HATCH_WAVES_LEGENDARY_EGG = 75;
 export const HATCH_WAVES_MANAPHY_EGG = 50;
 
 // Rates for specific random properties in 1/x
-export const GACHA_DEFAULT_SHINY_RATE = 128;
-export const GACHA_SHINY_UP_SHINY_RATE = 64;
-export const SAME_SPECIES_EGG_SHINY_RATE = 12;
-export const SAME_SPECIES_EGG_HA_RATE = 8;
-export const MANAPHY_EGG_MANAPHY_RATE = 8;
-export const GACHA_EGG_HA_RATE = 192;
+export const GACHA_DEFAULT_SHINY_RATE = 64;
+export const GACHA_SHINY_UP_SHINY_RATE = 32;
+export const SAME_SPECIES_EGG_SHINY_RATE = 6;
+export const SAME_SPECIES_EGG_HA_RATE = 4;
+export const MANAPHY_EGG_MANAPHY_RATE = 4;
+export const GACHA_EGG_HA_RATE = 128;
 
 // Odds are 1/x
 // [COMMON, RARE, EPIC/MANAPHY, LEGEND]
@@ -49,5 +49,5 @@ export const BOOSTED_RARE_EGGMOVE_RATES: readonly number[] = [16, 12, 6, 3];
 
 // #region Variant properties
 // The chance x/10 of a shiny being a variant, then of being specifically an epic variant
-export const SHINY_VARIANT_CHANCE = 4;
-export const SHINY_EPIC_CHANCE = 1;
+export const SHINY_VARIANT_CHANCE = 5;
+export const SHINY_EPIC_CHANCE = 2;
